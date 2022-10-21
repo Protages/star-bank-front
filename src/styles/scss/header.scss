@@ -1,0 +1,64 @@
+@import "./static_variables.scss";
+
+
+.header {
+    height: $header_height;
+    color: $light_text_color;
+    background-color: $header_color;
+    font-size: 20px;
+    a {
+        color: $light_text_color;
+        text-decoration: none;
+    }
+    a:hover {
+        opacity: 0.5;
+    }
+
+    .container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .user_header {
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // a {
+        //     margin-left: 10px;
+        // }
+
+        .logout_btn {
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid $body_color;
+            border-radius: 5px;
+            padding: 5px 15px;
+            font-size: 20px;
+            color: $light_text_color;
+            margin-left: 10px;
+        }
+        .logout_btn:hover {
+            opacity: 1;
+            background-color: $body_color;
+            color: $header_color;
+        }
+    }
+}

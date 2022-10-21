@@ -1,0 +1,43 @@
+@import "./static_variables.scss";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: $body_color;
+    padding-bottom: 100px;
+}
+
+.container {
+    height: 100%;
+    width: 800px;
+    // border: 2px solid rgb(255, 115, 115);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.App {
+
+    @import "./my_button.scss";
+    @import "./my_input.scss";
+
+    @import "./login_form.scss";
+
+    @import "./modal.scss";
+
+    @import "./header.scss";
+
+    @import "./card_deposit_list.scss";
+
+    @import "./modal_sub_list.scss";
+
+    @import "./transactions.scss";
+
+    @import "./user.scss";
+}
+  

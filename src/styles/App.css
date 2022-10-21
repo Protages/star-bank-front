@@ -1,0 +1,235 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto'; }
+
+body {
+  background-color: #DADADA;
+  padding-bottom: 100px; }
+
+.container {
+  height: 100%;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.App .my_button {
+  border-radius: 5px;
+  background-color: #582F9B;
+  color: #ffff;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  box-sizing: border-box; }
+.App .my_button:hover {
+  opacity: 0.5; }
+.App .blocked_btn {
+  background-color: #ff6464; }
+.App .blocked_btn:hover {
+  opacity: 1;
+  cursor: default; }
+.App .my_input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid #582F9B;
+  outline: none;
+  border-radius: 5px;
+  background: #582F9B;
+  color: #ffff;
+  font-size: 16px; }
+.App .my_input::placeholder {
+  color: #a6a6a6; }
+.App .login_form .my_input {
+  margin-bottom: 10px; }
+.App .login_form .my_button {
+  margin-top: 20px; }
+.App .modal {
+  z-index: 10;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.7); }
+  .App .modal .form p {
+    margin-top: 8px; }
+  .App .modal .my_button {
+    margin-top: 20px; }
+  .App .modal .errors {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .App .modal .modal_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px; }
+  .App .modal .modal_content {
+    padding: 25px;
+    background: #DADADA;
+    border-radius: 15px;
+    width: 500px;
+    min-height: 100px;
+    box-sizing: border-box; }
+    .App .modal .modal_content .loader {
+      margin-top: -20px; }
+.App .visible_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+.App .header {
+  height: 60px;
+  color: #ffff;
+  background-color: #582F9B;
+  font-size: 20px; }
+  .App .header a {
+    color: #ffff;
+    text-decoration: none; }
+  .App .header a:hover {
+    opacity: 0.5; }
+  .App .header .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; }
+  .App .header .navbar {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between; }
+    .App .header .navbar ul {
+      list-style: none; }
+      .App .header .navbar ul li {
+        display: inline-block;
+        margin-right: 10px; }
+  .App .header .user_header {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between; }
+    .App .header .user_header .logout_btn {
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid #DADADA;
+      border-radius: 5px;
+      padding: 5px 15px;
+      font-size: 20px;
+      color: #ffff;
+      margin-left: 10px; }
+    .App .header .user_header .logout_btn:hover {
+      opacity: 1;
+      background-color: #DADADA;
+      color: #582F9B; }
+.App .center .center_header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; }
+  .App .center .center_header .title {
+    flex: 3;
+    text-align: center;
+    margin-right: 10px; }
+  .App .center .center_header .my_button {
+    flex: 1; }
+.App .center .center_content .list .item {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; }
+  .App .center .center_content .list .item .visible_modal {
+    align-items: start;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .App .center .center_content .list .item .item_content {
+    position: relative;
+    flex: 3;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #582F9B;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column; }
+    .App .center .center_content .list .item .item_content p {
+      display: inline-block;
+      padding-bottom: 4px; }
+    .App .center .center_content .list .item .item_content .cashback {
+      position: absolute;
+      align-self: flex-end; }
+    .App .center .center_content .list .item .item_content .item_blocked {
+      color: #ff6464;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 20px; }
+  .App .center .center_content .list .item .item_btns {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .App .center .center_content .list .item .item_btns .my_button {
+      margin-top: 10px; }
+    .App .center .center_content .list .item .item_btns .my_button:first-child {
+      margin-top: 0; }
+.App .center .center_content .sub_items hr {
+  margin-top: 20px;
+  border: none;
+  outline: 2px solid #582F9B; }
+.App .center .center_content .sub_items .sub_title {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center; }
+.App .center .center_content .sub_items .list .item .item_content {
+  margin-right: 0; }
+.App .modal_sub_list .modal_sub_title {
+  text-align: center;
+  margin-top: 15px; }
+.App .modal_sub_list .modal_sub_item {
+  margin-top: 5px;
+  background-color: #582F9B;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffff; }
+.App .modal_sub_list .card_cashbacks .card_cashback {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #DADADA;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 5px; }
+.App .transaction_list .modal .my_button {
+  margin-top: 20px; }
+.App .transaction .item_content {
+  margin-right: 0; }
+  .App .transaction .item_content .incoming_money {
+    color: green;
+    margin-left: 5px;
+    font-weight: bold; }
+  .App .transaction .item_content .outgoing_money {
+    color: #ff6464;
+    margin-left: 5px;
+    font-weight: bold; }
+.App .account_tarif .center_content .tarif,
+.App .account_tarif .center_content .about {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #582F9B;
+  border-radius: 5px;
+  color: #ffff;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column; }
+
+/*# sourceMappingURL=App.css.map */

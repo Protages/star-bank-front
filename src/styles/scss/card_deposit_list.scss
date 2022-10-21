@@ -1,0 +1,109 @@
+@import "./static_variables.scss";
+
+.center {
+    .container {
+        // display: flex;
+        // padding-top: 20px;
+    }
+
+    .center_header {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            flex: 3;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .my_button {
+            flex: 1;
+        }
+    }
+
+    .center_content {
+        .list {
+            .item {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                // .modal {
+                //     .my_button {
+                //         margin-top: 10px;
+                //     }
+                // }
+                .visible_modal {
+                    align-items: start;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+
+                .item_content {
+                    position: relative;
+                    flex: 3;
+                    margin-right: 10px;
+                    padding: 10px;
+                    background-color: $header_color;
+                    border-radius: 5px;
+                    color: $light_text_color;
+                    font-size: 16px;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    p {
+                        display: inline-block;
+                        padding-bottom: 4px;
+                    }
+                    .cashback {
+                        position: absolute;
+                        align-self: flex-end;
+                    }
+                    .item_blocked {
+                        color: $red_text_color;
+                        position: absolute;
+                        right: 10px;
+                        bottom: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+                .item_btns {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .my_button {
+                        margin-top: 10px;
+                    }
+                    .my_button:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        .sub_items {
+            hr { 
+                margin-top: 20px;
+                border: none;
+                outline: 2px solid $header_color;
+            }
+        
+            .sub_title {
+                margin-top: 20px;
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .list {
+                .item {
+                    .item_content {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

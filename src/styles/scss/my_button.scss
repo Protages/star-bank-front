@@ -1,0 +1,26 @@
+@import "./static_variables.scss";
+
+.my_button {
+    border-radius: 5px;
+    background-color: $header_color;
+    color: $light_text_color;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.my_button:hover {
+    opacity: 0.5;
+}
+
+.blocked_btn {
+    background-color: $red_text_color;
+}
+.blocked_btn:hover {
+    opacity: 1;
+    cursor: default;
+}

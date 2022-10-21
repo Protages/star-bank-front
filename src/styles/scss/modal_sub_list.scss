@@ -1,0 +1,28 @@
+@import "./static_variables.scss";
+
+
+.modal_sub_list {
+    .modal_sub_title {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .modal_sub_item {
+        margin-top: 5px;
+        background-color: $header_color;
+        border-radius: 10px;
+        padding: 10px;
+        color: $light_text_color;
+    }
+
+    .card_cashbacks {
+        .card_cashback {
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid $body_color;
+            border-radius: 10px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    }
+}

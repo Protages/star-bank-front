@@ -1,0 +1,42 @@
+@import "./static_variables.scss";
+
+
+.account_tarif {
+    // .modal {
+    //     .update_user_form {
+    //         p {
+    //             margin-top: 8px;
+    //         }
+    //     }
+    //     .my_button {
+    //         margin-top: 20px;
+    //     }
+    // }
+
+    .center_content {
+        .tarif,
+        .about {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: $header_color;
+            border-radius: 5px;
+            color: $light_text_color;
+            font-size: 16px;
+    
+            display: flex;
+            flex-direction: column;
+        }
+    
+        // hr {
+        //     margin-top: 20px;
+        //     border: none;
+        //     outline: 2px solid $header_color;
+        // }
+    
+        // .sub_title {
+        //     margin-top: 20px;
+        //     font-size: 24px;
+        //     text-align: center;
+        // }
+    }
+}
