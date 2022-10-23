@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CardTypeService from '../API/CardTypeService'
 import ChangeCardType from './ChangeCardType'
+import ChangeCardDesign from "./ChangeCardDesign"
 import MakeTransaction from './MakeTransaction'
 import CardService from "../API/CardService"
 import MyButton from './UI/MyButton'
@@ -9,6 +10,7 @@ import { useFetch } from "../hooks/useFetch";
 
 const CardItem = ({card, isSubItem, user}) => {
     const [updateCardType, setUpdateCardType] = useState(false)
+    const [updateCardDesign, setUpdateCardDesign] = useState(false)
     const [makeTransaction, setMakeTransaction] = useState(false)
     const [currentCard, setCurrentCard] = useState(card)
 
@@ -32,6 +34,14 @@ const CardItem = ({card, isSubItem, user}) => {
                     setCard={setCurrentCard}
                     isModalVisible={updateCardType} 
                     setIsModalVisible={setUpdateCardType}
+                />
+            }
+            {updateCardDesign && 
+                <ChangeCardDesign 
+                    card={currentCard}
+                    setCard={setCurrentCard}
+                    isModalVisible={updateCardDesign} 
+                    setIsModalVisible={setUpdateCardDesign}
                 />
             }
             {makeTransaction && 
@@ -66,11 +76,13 @@ const CardItem = ({card, isSubItem, user}) => {
                     {currentCard.is_blocked 
                         ? <>
                             <MyButton isBlocked={true}>Сменить тип</MyButton>
+                            <MyButton isBlocked={true}>Сменить дизайн</MyButton>
                             <MyButton isBlocked={true}>Сделать перевод</MyButton>
                             <MyButton onClick={unBlockedCard}>Разблокировать</MyButton>
                         </>
                         : <>
                             <MyButton onClick={e => setUpdateCardType(true)}>Сменить тип</MyButton>
+                            <MyButton onClick={e => setUpdateCardDesign(true)}>Сменить дизайн</MyButton>
                             <MyButton onClick={e => setMakeTransaction(true)}>Сделать перевод</MyButton>
                             <MyButton onClick={blockedCard}>Заблокировать</MyButton>
                         </>

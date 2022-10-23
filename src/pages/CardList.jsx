@@ -3,6 +3,7 @@ import { AuthContext } from '../context/index'
 import CardItem from '../components/CardItem'
 import MyButton from '../components/UI/MyButton'
 import Loader from '../components/UI/Loader/Loader'
+import CreateCard from '../components/CreateCard'
 import CardService from '../API/CardService'
 import UserService from '../API/UserService'
 import { useFetch } from "../hooks/useFetch";
@@ -13,6 +14,7 @@ const CardList = () => {
     const [userCards, setUserCards] = useState([])
     const [cards, setCards] = useState([])
     const [users, setUsers] = useState([])
+    const [createCard, setCreateCard] = useState(false)
 
     const [fetchUserCards, isUserCardsLoading, userCardsErrors] = useFetch(async () => {
         const response = await CardService.getMyCards()
@@ -29,7 +31,7 @@ const CardList = () => {
         const response = await UserService.getAllUsers()
         setUsers(response.data)
     })
-    
+
     useEffect(() => {
         fetchUserCards()
         fetchCards()
@@ -47,10 +49,18 @@ const CardList = () => {
     return (
         <div className='center card_list'>
             <div className='container'>
+                {createCard &&
+                    <CreateCard 
+                        userCards={userCards}
+                        setUserCards={setUserCards}
+                        isModalVisible={createCard}
+                        setIsModalVisible={setCreateCard}
+                    />
+                }
 
                 <div className='center_header'>
                     <h1 className='title'>Список ваших карт</h1>
-                    <MyButton>Создать карту</MyButton>
+                    <MyButton onClick={e => setCreateCard(true)}>Создать карту</MyButton>
                 </div>
 
                 <div className='center_content'>
